@@ -24,9 +24,17 @@
 .header__logo {
     display: flex;
     align-items: center;
-    gap: var(--space-sm);
-    color: var(--cloud-white);
+    text-decoration: none;
 }
+
+.header__logo-image {
+    height: 50px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    mix-blend-mode: lighten;
+}
+
 
 .header__logo:hover {
     color: var(--cloud-white);

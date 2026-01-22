@@ -26,11 +26,6 @@ const galleryImages = [
         alt: 'Misty mountain trails',
         span: 'normal',
     },
-    {
-        src: 'https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=80',
-        alt: 'Trekkers at mountain viewpoint',
-        span: 'large',
-    },
 ];
 
 function Gallery() {

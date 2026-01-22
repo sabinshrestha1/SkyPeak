@@ -2,14 +2,14 @@ import './Experiences.css';
 
 const experiences = [
     {
-        image: 'https://images.unsplash.com/photo-1507034589631-9433cc6bc453?w=600&q=80',
+        image: '/paragliding-in-nepal.jpg',
         title: 'Paragliding Over Valleys',
         duration: '15-30 mins',
         difficulty: 'Moderate',
         description: 'Soar above stunning valleys with panoramic Himalayan views.',
     },
     {
-        image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80',
+        image: '/Glaswalk.png',
         title: 'Glass Skywalk',
         duration: '30 mins',
         difficulty: 'Easy',
@@ -23,7 +23,7 @@ const experiences = [
         description: 'Witness magical Himalayan sunrises painting the peaks gold.',
     },
     {
-        image: 'https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?w=600&q=80',
+        image: '/skypeak.png',
         title: 'Cable Car Ride',
         duration: '20 mins',
         difficulty: 'Easy',

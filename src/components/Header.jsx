@@ -25,18 +25,18 @@ function Header() {
     <header className={`header ${isScrolled ? 'header--scrolled' : ''}`}>
       <div className="container header__container">
         <a href="#home" className="header__logo">
-          <span className="header__logo-icon">🏔️</span>
-          <span className="header__logo-text">
-            <span className="header__logo-name">SkyPeak</span>
-            <span className="header__logo-tagline">Nepal</span>
-          </span>
+          <img
+            src="/skypeak_logo.png"
+            alt="SkyPeak Nepal Logo"
+            className="header__logo-image"
+          />
         </a>
 
         <nav className={`header__nav ${isMobileMenuOpen ? 'header__nav--open' : ''}`}>
           {navLinks.map((link) => (
-            <a 
-              key={link.name} 
-              href={link.href} 
+            <a
+              key={link.name}
+              href={link.href}
               className="header__nav-link"
               onClick={() => setIsMobileMenuOpen(false)}
             >
@@ -48,7 +48,7 @@ function Header() {
           </a>
         </nav>
 
-        <button 
+        <button
           className="header__mobile-toggle"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
