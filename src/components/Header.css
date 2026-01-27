@@ -8,11 +8,10 @@
     transition: all var(--transition-normal);
 }
 
-.header--scrolled {
-    background: rgba(15, 23, 42, 0.95);
-    backdrop-filter: blur(20px);
-    box-shadow: var(--shadow-lg);
-    padding: var(--space-sm) 0;
+.header--hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100%);
 }
 
 .header__container {
@@ -28,153 +27,167 @@
 }
 
 .header__logo-image {
-    height: 50px;
+    height: 200px;
     width: auto;
     max-width: 100%;
     object-fit: contain;
-    mix-blend-mode: lighten;
+    transition: all var(--transition-normal);
 }
 
+.header__logo:hover .header__logo-image {
+    transform: scale(1.02);
+}
 
 .header__logo:hover {
     color: var(--cloud-white);
 }
 
-.header__logo-icon {
-    font-size: 2rem;
+/* ===== Menu Button & Dropdown ===== */
+.header__menu-wrapper {
+    position: relative;
 }
 
-.header__logo-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.1;
-}
-
-.header__logo-name {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 1.25rem;
-}
-
-.header__logo-tagline {
-    font-size: 0.75rem;
-    opacity: 0.8;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-}
-
-.header__nav {
+.header__menu-btn {
     display: flex;
     align-items: center;
-    gap: var(--space-xl);
-}
-
-.header__nav-link {
-    color: rgba(255, 255, 255, 0.9);
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-lg);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-full);
+    color: var(--cloud-white);
     font-weight: 500;
     font-size: 0.95rem;
-    position: relative;
-    padding: var(--space-xs) 0;
+    cursor: pointer;
+    transition: all var(--transition-normal);
 }
 
-.header__nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
+.header__menu-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.header__menu-btn--open {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.header__menu-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 18px;
+}
+
+.header__menu-icon span {
+    display: block;
     height: 2px;
-    background: var(--gradient-sunset);
-    transition: width var(--transition-normal);
-}
-
-.header__nav-link:hover {
-    color: var(--cloud-white);
-}
-
-.header__nav-link:hover::after {
-    width: 100%;
-}
-
-.header__cta {
-    padding: var(--space-sm) var(--space-lg);
-    font-size: 0.9rem;
-}
-
-.header__mobile-toggle {
-    display: none;
-    width: 32px;
-    height: 32px;
-    background: transparent;
-    position: relative;
-}
-
-.header__hamburger,
-.header__hamburger::before,
-.header__hamburger::after {
-    width: 24px;
-    height: 2px;
-    background: var(--cloud-white);
+    background: currentColor;
     border-radius: 2px;
     transition: all var(--transition-normal);
 }
 
-.header__hamburger::before,
-.header__hamburger::after {
-    content: '';
+.header__menu-icon span:nth-child(1) {
+    width: 100%;
+}
+
+.header__menu-icon span:nth-child(2) {
+    width: 70%;
+}
+
+.header__menu-icon span:nth-child(3) {
+    width: 50%;
+}
+
+.header__menu-btn--open .header__menu-icon span:nth-child(1) {
+    transform: rotate(45deg) translate(4px, 4px);
+    width: 100%;
+}
+
+.header__menu-btn--open .header__menu-icon span:nth-child(2) {
+    opacity: 0;
+    width: 0;
+}
+
+.header__menu-btn--open .header__menu-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(4px, -4px);
+    width: 100%;
+}
+
+.header__menu-text {
+    font-family: var(--font-body);
+}
+
+/* Dropdown Menu */
+.header__dropdown {
     position: absolute;
-    left: 4px;
+    top: calc(100% + var(--space-md));
+    right: 0;
+    min-width: 220px;
+    background: rgba(15, 23, 42, 0.98);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl), 0 20px 40px rgba(0, 0, 0, 0.4);
+    padding: var(--space-sm);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all var(--transition-normal);
 }
 
-.header__hamburger::before {
-    top: 8px;
+.header__dropdown--open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
-.header__hamburger::after {
-    bottom: 8px;
+.header__dropdown-link {
+    display: block;
+    padding: var(--space-md) var(--space-lg);
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+    text-decoration: none;
 }
 
-.header__hamburger--open {
-    background: transparent;
+.header__dropdown-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--cloud-white);
+    padding-left: calc(var(--space-lg) + 4px);
 }
 
-.header__hamburger--open::before {
-    top: 50%;
-    transform: translateY(-50%) rotate(45deg);
+.header__dropdown-link--active {
+    color: var(--sky-blue-light);
+    background: rgba(14, 165, 233, 0.1);
 }
 
-.header__hamburger--open::after {
-    bottom: 50%;
-    transform: translateY(50%) rotate(-45deg);
+.header__dropdown-link--active:hover {
+    background: rgba(14, 165, 233, 0.15);
+    color: var(--sky-blue-light);
 }
 
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
-    .header__mobile-toggle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .header__menu-text {
+        display: none;
     }
 
-    .header__nav {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 80%;
-        max-width: 320px;
-        height: 100vh;
-        background: var(--deep-navy);
-        flex-direction: column;
-        justify-content: center;
-        gap: var(--space-xl);
-        transition: right var(--transition-normal);
-        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+    .header__menu-btn {
+        padding: var(--space-sm);
     }
 
-    .header__nav--open {
+    .header__dropdown {
         right: 0;
+        min-width: 200px;
     }
+}
 
-    .header__nav-link {
-        font-size: 1.25rem;
+@media (max-width: 480px) {
+    .header__logo-image {
+        height: 160px;
     }
 }

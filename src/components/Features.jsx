@@ -2,24 +2,24 @@ import './Features.css';
 
 const features = [
     {
-        icon: '🏔️',
-        title: 'Highest Panoramic Viewpoint',
-        description: 'Experience 360° views of the majestic Himalayan range from Nepal\'s most stunning altitude.',
-    },
-    {
         icon: '🪂',
-        title: 'World-Class Paragliding',
-        description: 'Soar above valleys and ridges with certified pilots and breathtaking aerial perspectives.',
+        title: 'Bungee Jump',
+        description: 'Take the ultimate leap of faith from Nepal\'s highest bungee platform with breathtaking valley views.',
     },
     {
-        icon: '🚠',
-        title: 'Scenic Cable Car Access',
-        description: 'Glide through misty clouds and lush forests on a scenic cable car journey to the summit.',
+        icon: '🌉',
+        title: 'Glass Cantilever Walk',
+        description: 'Walk on transparent glass floors suspended over dramatic cliffs for a thrilling perspective of the valley below.',
     },
     {
-        icon: '☕',
-        title: 'Sky Cafes & Photo Decks',
-        description: 'Relax at mountain-top cafes with panoramic views perfect for your golden hour shots.',
+        icon: '🍽️',
+        title: 'Fly Dining',
+        description: 'Enjoy a gourmet meal suspended high in the sky with panoramic mountain views all around you.',
+    },
+    {
+        icon: '🏎️',
+        title: 'ATV Jungle Safari',
+        description: 'Explore rugged trails and lush forests on an exciting all-terrain vehicle adventure through the wilderness.',
     },
 ];
 
@@ -29,7 +29,7 @@ function Features() {
             <div className="container">
                 <h2 className="section-title">Why SkyPeak?</h2>
                 <p className="section-subtitle">
-                    Discover what makes SkyPeak Nepal's most sought-after mountain destination
+                    Discover what makes SkyPeak Nepal's most sought-after destination
                 </p>
 
                 <div className="features__grid">

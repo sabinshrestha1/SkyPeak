@@ -1,3 +1,4 @@
+import { Routes, Route } from 'react-router-dom'
 import './index.css'
 import Header from './components/Header'
 import Hero from './components/Hero'
@@ -8,19 +9,32 @@ import Gallery from './components/Gallery'
 import Testimonials from './components/Testimonials'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
+import AboutUs from './pages/AboutUs'
+import ExperiencesPage from './pages/ExperiencesPage'
+
+function HomePage() {
+  return (
+    <>
+      <Hero />
+      <Experiences />
+      <PlanVisit />
+      <Gallery />
+      <Testimonials />
+      <CTA />
+    </>
+  )
+}
 
 function App() {
   return (
     <>
       <Header />
       <main>
-        <Hero />
-        <Features />
-        <Experiences />
-        <PlanVisit />
-        <Gallery />
-        <Testimonials />
-        <CTA />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/experiences" element={<ExperiencesPage />} />
+        </Routes>
       </main>
       <Footer />
     </>

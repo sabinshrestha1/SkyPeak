@@ -1,0 +1,56 @@
+.parallax {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Fallback for mobile devices where fixed attachment doesn't work well */
+@supports (-webkit-touch-callout: none) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+.parallax__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+            rgba(10, 13, 18, 0.7) 0%,
+            rgba(10, 13, 18, 0.5) 50%,
+            rgba(10, 13, 18, 0.7) 100%);
+}
+
+.parallax__content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: var(--space-2xl);
+    max-width: 800px;
+}
+
+.parallax__title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--cloud-white);
+    margin-bottom: var(--space-lg);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.parallax__subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.8;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}

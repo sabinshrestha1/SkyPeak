@@ -4,6 +4,15 @@ function Hero() {
     return (
         <section id="home" className="hero">
             <div className="hero__background">
+                <video
+                    className="hero__video"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                >
+                    <source src="/skypeak.mp4" type="video/mp4" />
+                </video>
                 <div className="hero__overlay"></div>
                 <div className="hero__particles">
                     {[...Array(20)].map((_, i) => (
@@ -17,24 +26,11 @@ function Hero() {
             </div>
 
             <div className="container hero__content">
-                <div className="hero__badge">
-                    <span className="hero__badge-icon">✨</span>
-                    <span>Nepal's Premier Mountain Destination</span>
-                </div>
-
                 <h1 className="hero__title">
-                    Where Nepal <br />
-                    <span className="hero__title-highlight">Touches the Sky</span>
+                    Every Thrill. <br />
+                    <span className="hero__title-highlight">One Destination.</span>
                 </h1>
 
-                <p className="hero__subtitle">
-                    Adventure • Views • Peace
-                </p>
-
-                <p className="hero__description">
-                    Experience breathtaking Himalayan panoramas, world-class paragliding,
-                    and unforgettable mountain adventures at Nepal's most stunning viewpoint.
-                </p>
 
                 <div className="hero__buttons">
                     <a href="#experiences" className="btn btn-primary">
@@ -43,14 +39,11 @@ function Hero() {
                             <path d="M5 12h14M12 5l7 7-7 7" />
                         </svg>
                     </a>
-                    <a href="#contact" className="btn btn-secondary">
-                        <span>Contact Us</span>
-                    </a>
                 </div>
 
                 <div className="hero__stats">
                     <div className="hero__stat">
-                        <span className="hero__stat-number">3,500m</span>
+                        <span className="hero__stat-number">1,500m</span>
                         <span className="hero__stat-label">Altitude</span>
                     </div>
                     <div className="hero__stat">
@@ -58,7 +51,7 @@ function Hero() {
                         <span className="hero__stat-label">Panoramic Views</span>
                     </div>
                     <div className="hero__stat">
-                        <span className="hero__stat-number">5+</span>
+                        <span className="hero__stat-number">10+</span>
                         <span className="hero__stat-label">Adventures</span>
                     </div>
                 </div>

@@ -1,0 +1,295 @@
+.experiences-page {
+    min-height: 100vh;
+}
+
+/* ===== Hero Section ===== */
+.experiences-page__hero {
+    padding: calc(var(--space-3xl) * 2) 0 var(--space-3xl);
+    background: linear-gradient(135deg, var(--deep-navy) 0%, #1e3a5f 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.experiences-page__hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/skypeak.jpg') center/cover no-repeat;
+    opacity: 0.15;
+}
+
+.experiences-page__title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--cloud-white);
+    margin-bottom: var(--space-md);
+    position: relative;
+    z-index: 1;
+}
+
+.experiences-page__subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== Section Styles ===== */
+.experiences-page__section {
+    padding: var(--space-3xl) 0;
+    background: var(--snow-white);
+}
+
+.experiences-page__section--alt {
+    background: linear-gradient(180deg, #E0F2FE 0%, var(--snow-white) 100%);
+}
+
+.experiences-page__section-header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+}
+
+.experiences-page__section-title {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    color: var(--deep-navy);
+    margin-bottom: var(--space-sm);
+}
+
+.experiences-page__section-subtitle {
+    color: var(--mountain-grey);
+    font-size: 1.1rem;
+}
+
+/* ===== Grid & Cards ===== */
+.experiences-page__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: var(--space-xl);
+}
+
+.experiences-page__card {
+    background: var(--cloud-white);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.experiences-page__card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.experiences-page__card--featured {
+    border: 2px solid rgba(14, 165, 233, 0.3);
+}
+
+.experiences-page__image-wrapper {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+/* Slideshow Styles */
+.experiences-page__slideshow {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.experiences-page__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.experiences-page__image--active {
+    opacity: 1;
+}
+
+/* Single image (no slideshow) */
+.experiences-page__slideshow .experiences-page__image:only-child {
+    opacity: 1;
+}
+
+/* Dot indicators */
+.experiences-page__dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+    z-index: 10;
+}
+
+.experiences-page__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: all var(--transition-fast);
+}
+
+.experiences-page__dot:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.experiences-page__dot--active {
+    background: var(--cloud-white);
+    transform: scale(1.2);
+}
+
+.experiences-page__card:hover .experiences-page__image--active {
+    transform: scale(1.08);
+}
+
+.experiences-page__badges {
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+    display: flex;
+    gap: var(--space-xs);
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.experiences-page__badge {
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+}
+
+.experiences-page__badge--featured {
+    background: linear-gradient(135deg, var(--golden-hour), #f59e0b);
+    color: white;
+}
+
+.experiences-page__badge--difficulty {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--sky-blue);
+}
+
+.experiences-page__content {
+    padding: var(--space-lg);
+}
+
+.experiences-page__card-title {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-sm);
+    color: var(--deep-navy);
+}
+
+.experiences-page__description {
+    color: var(--mountain-grey);
+    font-size: 0.95rem;
+    margin-bottom: var(--space-lg);
+    line-height: 1.6;
+}
+
+.experiences-page__meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.experiences-page__duration {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    color: var(--mountain-grey);
+    font-size: 0.9rem;
+}
+
+.experiences-page__duration svg {
+    color: var(--sky-blue);
+}
+
+.experiences-page__link {
+    color: var(--sky-blue);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all var(--transition-fast);
+}
+
+.experiences-page__link:hover {
+    color: var(--sky-blue-dark);
+    transform: translateX(4px);
+}
+
+/* ===== CTA Section ===== */
+.experiences-page__cta-section {
+    padding: var(--space-3xl) 0;
+    background: linear-gradient(135deg, var(--deep-navy) 0%, #1e3a5f 100%);
+}
+
+.experiences-page__cta-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.experiences-page__cta-content h2 {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    color: var(--cloud-white);
+    margin-bottom: var(--space-md);
+}
+
+.experiences-page__cta-content p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    margin-bottom: var(--space-xl);
+}
+
+.experiences-page__cta-buttons {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.experiences-page__cta-buttons .btn-secondary {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: var(--cloud-white);
+}
+
+.experiences-page__cta-buttons .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .experiences-page__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experiences-page__cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .experiences-page__cta-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+}

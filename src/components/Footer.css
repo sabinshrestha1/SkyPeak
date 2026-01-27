@@ -18,10 +18,12 @@
 }
 
 .footer__logo-image {
-    height: 50px;
+    height: 200px;
     width: auto;
+    max-width: 100%;
     object-fit: contain;
     mix-blend-mode: lighten;
+    filter: brightness(1.2);
 }
 
 .footer__description {
@@ -129,5 +131,9 @@
     .footer__bottom {
         flex-direction: column;
         text-align: center;
+    }
+
+    .footer__logo-image {
+        height: 160px;
     }
 }

@@ -1,47 +1,28 @@
+import { Link } from 'react-router-dom';
 import './Experiences.css';
 
-const experiences = [
+// Featured experiences for homepage
+const featuredExperiences = [
     {
-        image: '/paragliding-in-nepal.jpg',
-        title: 'Paragliding Over Valleys',
-        duration: '15-30 mins',
+        image: '/Glass_Sky_Walk.png',
+        title: 'Glass Sky Walk',
+        duration: '30-45 mins',
+        difficulty: 'Easy',
+        description: 'Walk on air with transparent floors over dramatic cliffs and breathtaking valleys.',
+    },
+    {
+        image: '/Glass_Cantilever.png',
+        title: 'Glass Cantilever',
+        duration: '30-45 mins',
         difficulty: 'Moderate',
-        description: 'Soar above stunning valleys with panoramic Himalayan views.',
+        description: 'Walk on transparent glass extending over the cliff edge with stunning valley views.',
     },
     {
-        image: '/Glaswalk.png',
-        title: 'Glass Skywalk',
-        duration: '30 mins',
+        image: '/Sky_Tower_Water_Fall.png',
+        title: 'Sky Tower Water Fall',
+        duration: '45 mins - 1 hour',
         difficulty: 'Easy',
-        description: 'Walk on air with transparent floors over dramatic cliffs.',
-    },
-    {
-        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80',
-        title: 'Sunrise Viewpoint',
-        duration: '2-3 hours',
-        difficulty: 'Easy',
-        description: 'Witness magical Himalayan sunrises painting the peaks gold.',
-    },
-    {
-        image: '/skypeak.png',
-        title: 'Cable Car Ride',
-        duration: '20 mins',
-        difficulty: 'Easy',
-        description: 'Glide through clouds to the summit in scenic comfort.',
-    },
-    {
-        image: 'https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&q=80',
-        title: 'Mountain Hiking',
-        duration: '3-5 hours',
-        difficulty: 'Moderate',
-        description: 'Trek through pristine trails with spectacular mountain vistas.',
-    },
-    {
-        image: 'https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=600&q=80',
-        title: 'Sky Cafe Experience',
-        duration: '1-2 hours',
-        difficulty: 'Easy',
-        description: 'Sip coffee with clouds at your feet and peaks all around.',
+        description: 'Witness the majestic cascading waters from the towering heights of SkyPeak.',
     },
 ];
 
@@ -55,7 +36,7 @@ function Experiences() {
                 </p>
 
                 <div className="experiences__grid">
-                    {experiences.map((exp, index) => (
+                    {featuredExperiences.map((exp, index) => (
                         <div
                             key={exp.title}
                             className="experiences__card"
@@ -63,9 +44,6 @@ function Experiences() {
                         >
                             <div className="experiences__image-wrapper">
                                 <img src={exp.image} alt={exp.title} className="experiences__image" />
-                                <div className="experiences__overlay">
-                                    <span className="experiences__difficulty">{exp.difficulty}</span>
-                                </div>
                             </div>
                             <div className="experiences__content">
                                 <h3 className="experiences__title">{exp.title}</h3>
@@ -88,7 +66,12 @@ function Experiences() {
                 </div>
 
                 <div className="experiences__cta">
-                    <a href="#contact" className="btn btn-primary">View All Experiences</a>
+                    <Link to="/experiences" className="btn btn-primary">
+                        Explore All Adventures →
+                    </Link>
+                    <p className="experiences__cta-hint">
+                        Discover 10+ more thrilling experiences waiting for you
+                    </p>
                 </div>
             </div>
         </section>

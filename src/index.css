@@ -1,7 +1,23 @@
 /* ===== SkyPeak Nepal Design System ===== */
 
 :root {
-  /* Color Palette */
+  /* DARK ATMOSPHERIC PALETTE */
+  /* Background & Base */
+  --bg-dark: #0A0D12;
+  --bg-dark-secondary: #12161D;
+  --bg-overlay: rgba(10, 13, 18, 0.85);
+
+  /* Text Colors */
+  --text-primary: #FFFFFF;
+  --text-muted: #A8B0BC;
+  --text-subtle: #6B7280;
+
+  /* Accent - Use Sparingly! */
+  --accent-orange: #F97316;
+  --accent-orange-light: #FB923C;
+  --accent-orange-glow: rgba(249, 115, 22, 0.4);
+
+  /* Legacy colors (keeping for compatibility) */
   --sky-blue: #0EA5E9;
   --sky-blue-light: #38BDF8;
   --sky-blue-dark: #0284C7;
@@ -13,17 +29,17 @@
   --deep-navy: #0F172A;
   --snow-white: #F9FAFB;
   --cloud-white: #FFFFFF;
-  
+
   /* Gradients */
   --gradient-sky: linear-gradient(135deg, #0EA5E9 0%, #38BDF8 50%, #7DD3FC 100%);
-  --gradient-sunset: linear-gradient(135deg, #F97316 0%, #FBBF24 100%);
-  --gradient-hero: linear-gradient(180deg, rgba(15, 23, 42, 0.7) 0%, rgba(15, 23, 42, 0.4) 50%, rgba(15, 23, 42, 0.8) 100%);
-  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
-  
+  --gradient-sunset: linear-gradient(135deg, #F97316 0%, #FB923C 100%);
+  --gradient-hero: linear-gradient(180deg, rgba(10, 13, 18, 0.6) 0%, rgba(10, 13, 18, 0.3) 50%, rgba(10, 13, 18, 0.85) 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+
   /* Typography */
   --font-heading: 'Poppins', sans-serif;
   --font-body: 'Inter', sans-serif;
-  
+
   /* Spacing */
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
@@ -33,21 +49,21 @@
   --space-2xl: 3rem;
   --space-3xl: 4rem;
   --space-4xl: 6rem;
-  
+
   /* Border Radius */
   --radius-sm: 0.375rem;
   --radius-md: 0.5rem;
   --radius-lg: 1rem;
   --radius-xl: 1.5rem;
   --radius-full: 9999px;
-  
+
   /* Shadows */
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
   --shadow-glow: 0 0 40px rgba(14, 165, 233, 0.3);
-  
+
   /* Transitions */
   --transition-fast: 150ms ease;
   --transition-normal: 300ms ease;
@@ -55,7 +71,9 @@
 }
 
 /* ===== Reset & Base Styles ===== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -75,17 +93,33 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.2;
   color: var(--deep-navy);
 }
 
-h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
-h2 { font-size: clamp(2rem, 4vw, 3rem); }
-h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
-h4 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+h4 {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+}
 
 a {
   text-decoration: none;
@@ -125,6 +159,10 @@ button {
 .section-title {
   text-align: center;
   margin-bottom: var(--space-lg);
+  background: var(--gradient-sunset);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .section-subtitle {
@@ -148,14 +186,14 @@ button {
 }
 
 .btn-primary {
-  background: var(--gradient-sky);
-  color: var(--cloud-white);
-  box-shadow: var(--shadow-md), 0 4px 20px rgba(14, 165, 233, 0.3);
+  background: var(--gradient-sunset);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-md), 0 4px 20px var(--accent-orange-glow);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-lg), 0 8px 30px rgba(14, 165, 233, 0.4);
+  box-shadow: var(--shadow-lg), 0 8px 30px var(--accent-orange-glow);
 }
 
 .btn-secondary {
@@ -193,13 +231,29 @@ button {
 
 /* ===== Animations ===== */
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 @keyframes pulse {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.05); opacity: 0.8; }
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
 }
 
 @keyframes fadeInUp {
@@ -207,6 +261,7 @@ button {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -214,8 +269,13 @@ button {
 }
 
 @keyframes shimmer {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
+  0% {
+    background-position: -200% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
 }
 
 .animate-fade-in-up {
@@ -231,7 +291,7 @@ button {
   .section {
     padding: var(--space-3xl) 0;
   }
-  
+
   .container {
     padding: 0 var(--space-md);
   }
