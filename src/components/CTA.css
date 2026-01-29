@@ -7,7 +7,7 @@
     position: absolute;
     inset: 0;
     background:
-        url('https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=1920&q=80') center/cover no-repeat;
+        url('/AVT_Jungle_Park.webp') center/cover no-repeat;
     z-index: -2;
 }
 

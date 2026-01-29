@@ -194,6 +194,7 @@ button {
 .btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg), 0 8px 30px var(--accent-orange-glow);
+  color: var(--text-primary);
 }
 
 .btn-secondary {

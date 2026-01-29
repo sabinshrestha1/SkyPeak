@@ -1,5 +1,8 @@
 .gallery {
     background: linear-gradient(180deg, #E0F2FE 0%, var(--snow-white) 100%);
+    padding-top: var(--space-xl);
+    margin-top: -1px;
+    /* Prevent any gap */
 }
 
 .gallery__grid {

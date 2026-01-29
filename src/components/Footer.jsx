@@ -15,10 +15,7 @@ function Footer() {
                                 className="footer__logo-image"
                             />
                         </div>
-                        <p className="footer__description">
-                            Nepal's premier mountain destination offering breathtaking views,
-                            world-class adventures, and unforgettable experiences.
-                        </p>
+                        
                         <div className="footer__social">
                             <a href="#" className="footer__social-link" aria-label="Facebook">
                                 <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
@@ -47,16 +44,15 @@ function Footer() {
                             <li><a href="#home">Home</a></li>
                             <li><a href="#experiences">Experiences</a></li>
                             <li><a href="#gallery">Gallery</a></li>
-                            <li><a href="#plan">Plan Your Visit</a></li>
                         </ul>
                     </div>
 
                     <div className="footer__links">
                         <h4 className="footer__title">Adventures</h4>
                         <ul className="footer__list">
-                            <li><a href="#experiences">Paragliding</a></li>
-                            <li><a href="#experiences">Cable Car Ride</a></li>
-                            <li><a href="#experiences">Sunrise Viewpoint</a></li>
+                            <li><a href="#experiences">Fly Dining</a></li>
+                            <li><a href="#experiences">Bungee Jump</a></li>
+                            <li><a href="#experiences">Edge Walk</a></li>
                             <li><a href="#experiences">Sky Cafe</a></li>
                         </ul>
                     </div>

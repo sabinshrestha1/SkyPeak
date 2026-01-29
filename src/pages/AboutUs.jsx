@@ -19,35 +19,35 @@ function AboutUs() {
             id: 1,
             name: 'Mr. Ram Chandra Sharma',
             position: 'President & Managing Director',
-            image: '/board/ram_chandra_sharma.png',
+            image: '/board/Ram_Chandra_Sharma.png',
             featured: true
         },
         {
             id: 2,
             name: 'Mr. Post Bahadur Khadka',
             position: 'Executive Director',
-            image: '/board/post_bahadur_khadka.png',
+            image: '/board/Post_Bahadhur_Khadka.png',
             featured: true
         },
         {
             id: 3,
             name: 'Mr. Purnasingh Thapa',
             position: 'Director',
-            image: '/board/purnasingh_thapa.png',
+            image: '/board/Purnasingh_Thapa.png',
             featured: false
         },
         {
             id: 4,
             name: 'Mrs. Rekha Baniya',
             position: 'Director',
-            image: '/board/rekha_baniya.png',
+            image: '/board/Rekha_Baniya.png',
             featured: false
         },
         {
             id: 5,
             name: 'Mr. Dhurba Paudel',
             position: 'Director',
-            image: '/board/dhurba_paudel.png',
+            image: '/board/Dhurba_Paudel.png',
             featured: false
         }
     ]
@@ -89,10 +89,6 @@ function AboutUs() {
                     <div className="about-hero__overlay"></div>
                 </div>
                 <div className="container about-hero__content">
-                    <div className="about-hero__badge">
-                        <span className="about-hero__badge-icon">🏔️</span>
-                        <span>Nepal's Premier Adventure Destination</span>
-                    </div>
                     <h1 className="about-hero__title">
                         About <span className="about-hero__title-highlight">SkyPeak</span>
                     </h1>
@@ -119,6 +115,13 @@ function AboutUs() {
                             part of Nepal's next global adventure tourism destination.
                         </p>
                     </div>
+                </div>
+
+                {/* Wave Divider */}
+                <div className="about-summary__wave">
+                    <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                        <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="#EFF6FF" />
+                    </svg>
                 </div>
             </section>
 
