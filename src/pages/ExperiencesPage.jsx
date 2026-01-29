@@ -5,77 +5,77 @@ import './ExperiencesPage.css';
 // All experiences available at SkyPeak
 const allExperiences = [
     {
-        images: ['/Capsule_Sky_Lift.png'],
+        images: ['/Capsule_Sky_Lift.webp'],
         title: 'Capsule Sky Lift',
         duration: '15-20 mins',
         difficulty: 'Easy',
         description: 'Glide through the clouds in our futuristic capsule with breathtaking panoramic views.',
     },
     {
-        images: ['/Mechanical_Swing.png'],
+        images: ['/Mechanical_Swing.webp'],
         title: 'Mechanical Swing',
         duration: '10-15 mins',
         difficulty: 'Thrilling',
         description: 'Feel the rush of adrenaline as you swing over the valley on our massive mechanical swing.',
     },
     {
-        images: ['/Bungee_Jump_1.png'],
+        images: ['/Bungee_Jump_1.webp'],
         title: 'Bungee Jump',
         duration: '20-30 mins',
         difficulty: 'Extreme',
         description: 'Take the ultimate leap of faith with our world-class bungee jumping experience.',
     },
     {
-        images: ['/Edge_Walk.png'],
+        images: ['/Edge_Walk.webp'],
         title: 'Edge Walk',
         duration: '45 mins - 1 hour',
         difficulty: 'Thrilling',
         description: 'Experience the thrill of walking on the edge of the mountain with safety harness.',
     },
     {
-        images: ['/Fly_Dining_1.png', '/Fly_Dining_2.png'],
+        images: ['/Fly_Dining_1.webp', '/Fly_Dining_2.webp'],
         title: 'Fly Dining',
         duration: '1-2 hours',
         difficulty: 'Easy',
         description: 'Dine suspended in the sky with gourmet cuisine and spectacular mountain panoramas.',
     },
     {
-        images: ['/Aadiyogi_Religious_Park.png', '/Aadiyogi_Religious_Park_1.png'],
+        images: ['/Aadiyogi_Religious_Park.webp', '/Aadiyogi_Religious_Park_1.webp'],
         title: 'Aadiyogi Religious Park',
         duration: '1-2 hours',
         difficulty: 'Easy',
         description: 'Explore the serene spiritual sanctuary with magnificent sculptures and peaceful gardens.',
     },
     {
-        images: ['/AVT_Jungle_Park.png', '/Raniban_Jungle.png'],
+        images: ['/AVT_Jungle_Park.webp', '/Raniban_Jungle.webp'],
         title: 'Jungle Adventure Park',
         duration: '2-3 hours',
         difficulty: 'Moderate',
         description: 'Adventure through lush jungle parks including Raniban forest with exciting trails and wildlife encounters.',
     },
     {
-        images: ['/Gaming_Zone.png', '/Cafeteria.png'],
+        images: ['/Gaming_Zone.webp', '/Cafeteria.webp'],
         title: 'Entertainment & Dining',
         duration: '1-3 hours',
         difficulty: 'Easy',
         description: 'Enjoy VR gaming, arcade entertainment, and delicious cuisine with stunning mountain views.',
     },
     {
-        images: ['/Metal_Tower_Climbing.png', '/Cultural_Dress.png'],
+        images: ['/Metal_Tower_Climbing.webp', '/Cultural_Dress.webp'],
         title: 'Tower Climbing & Culture',
         duration: '45 mins - 1.5 hours',
         difficulty: 'Thrilling',
         description: 'Challenge yourself with our towering metal climbing structure and dress up in traditional Nepali attire.',
     },
     {
-        images: ['/Mountain_Climbing.png', '/Mountain_Cycling.png'],
+        images: ['/Mountain_Climbing.webp', '/Mountain_Cycling.webp'],
         title: 'Mountain Adventures',
         duration: '2-5 hours',
         difficulty: 'Moderate to Extreme',
         description: 'Conquer the peaks with climbing adventures or ride through scenic trails on mountain bikes.',
     },
     {
-        images: ['/Planetarium.png'],
+        images: ['/Planetarium.webp'],
         title: 'Planetarium',
         duration: '45 mins - 1 hour',
         difficulty: 'Easy',
@@ -83,11 +83,11 @@ const allExperiences = [
     },
 
     {
-        images: ['/Laila_Majum.png'],
-        title: 'Laila Majum',
+        images: ['/Glass_Sky_Walk.webp'],
+        title: 'Glass Sky Walk',
         duration: '30-45 mins',
         difficulty: 'Easy',
-        description: 'Experience the legendary romantic viewpoint with stunning panoramic mountain vistas.',
+        description: 'Walk on air with transparent floors over dramatic cliffs and breathtaking valleys.',
     },
 ];
 
@@ -162,9 +162,6 @@ function ExperiencesPage() {
                             >
                                 <div className="experiences-page__image-wrapper">
                                     <ImageSlideshow images={exp.images} title={exp.title} />
-                                    <div className="experiences-page__badges">
-                                        <span className="experiences-page__badge experiences-page__badge--difficulty">{exp.difficulty}</span>
-                                    </div>
                                 </div>
                                 <div className="experiences-page__content">
                                     <h3 className="experiences-page__card-title">{exp.title}</h3>
@@ -177,7 +174,6 @@ function ExperiencesPage() {
                                             </svg>
                                             {exp.duration}
                                         </span>
-                                        <a href="#contact" className="experiences-page__link">Book Now →</a>
                                     </div>
                                 </div>
                             </div>

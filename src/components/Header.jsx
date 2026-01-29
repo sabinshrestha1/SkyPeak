@@ -33,10 +33,9 @@ function Header() {
 
   const menuLinks = [
     { name: 'Home', href: '/', isRoute: true },
-    { name: 'About Us', href: '/about', isRoute: true },
     { name: 'Experiences', href: '/experiences', isRoute: true },
+    { name: 'About Us', href: '/about', isRoute: true },
     { name: 'Gallery', href: '/#gallery', isRoute: false },
-    { name: 'Plan Visit', href: '/#plan', isRoute: false },
     { name: 'Contact', href: '/#contact', isRoute: false },
   ];
 

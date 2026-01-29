@@ -2,28 +2,33 @@ import './Gallery.css';
 
 const galleryImages = [
     {
-        src: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&q=80',
-        alt: 'Himalayan mountain range at sunrise',
-        span: 'large',
-    },
-    {
-        src: 'https://images.unsplash.com/photo-1507034589631-9433cc6bc453?w=600&q=80',
-        alt: 'Paragliding over Nepal valleys',
+        src: '/Aadiyogi_Religious_Park_1.webp',
+        alt: 'Aadiyogi Religious Park',
         span: 'normal',
     },
     {
-        src: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80',
-        alt: 'Snow-capped peaks and blue sky',
+        src: '/AVT_Jungle_Park.webp',
+        alt: 'ATV Jungle Safari',
         span: 'normal',
     },
     {
-        src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80',
-        alt: 'Golden hour mountain silhouette',
+        src: '/Bungee_Jump_1.webp',
+        alt: 'Bungee Jump Experience',
         span: 'normal',
     },
     {
-        src: 'https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?w=600&q=80',
-        alt: 'Misty mountain trails',
+        src: 'Gaming_Zone.webp',
+        alt: 'Gaming Zone',
+        span: 'normal',
+    },
+    {
+        src: '/Mountain_Cycling.webp',
+        alt: 'Mountain Cycling Adventure',
+        span: 'normal',
+    },
+    {
+        src: '/Fly_Dining_1.webp',
+        alt: 'Fly Dining Experience',
         span: 'normal',
     },
 ];

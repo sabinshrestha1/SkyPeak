@@ -4,8 +4,8 @@ const planItems = [
     {
         icon: '📍',
         title: 'Location',
-        value: 'Near Kathmandu Valley',
-        description: '2-3 hours drive from Kathmandu',
+        value: 'Bandipur, Tanahun',
+        description: '3-4 hours drive from Kathmandu',
     },
     {
         icon: '🌤️',

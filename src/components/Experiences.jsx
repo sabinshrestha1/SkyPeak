@@ -4,21 +4,21 @@ import './Experiences.css';
 // Featured experiences for homepage
 const featuredExperiences = [
     {
-        image: '/Glass_Sky_Walk.png',
-        title: 'Glass Sky Walk',
+        image: '/Laila_Majum.webp',
+        title: 'Laila Majum',
         duration: '30-45 mins',
         difficulty: 'Easy',
-        description: 'Walk on air with transparent floors over dramatic cliffs and breathtaking valleys.',
+        description: 'Experience the legendary romantic viewpoint with stunning panoramic mountain vistas.',
     },
     {
-        image: '/Glass_Cantilever.png',
+        image: '/Glass_Cantilever.webp',
         title: 'Glass Cantilever',
         duration: '30-45 mins',
         difficulty: 'Moderate',
         description: 'Walk on transparent glass extending over the cliff edge with stunning valley views.',
     },
     {
-        image: '/Sky_Tower_Water_Fall.png',
+        image: '/Sky_Tower_Water_Fall.webp',
         title: 'Sky Tower Water Fall',
         duration: '45 mins - 1 hour',
         difficulty: 'Easy',
@@ -73,6 +73,13 @@ function Experiences() {
                         Discover 10+ more thrilling experiences waiting for you
                     </p>
                 </div>
+            </div>
+
+            {/* Wave Divider */}
+            <div className="experiences__wave">
+                <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                    <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="#E0F2FE" />
+                </svg>
             </div>
         </section>
     );

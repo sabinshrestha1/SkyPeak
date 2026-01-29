@@ -4,9 +4,7 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import Features from './components/Features'
 import Experiences from './components/Experiences'
-import PlanVisit from './components/PlanVisit'
 import Gallery from './components/Gallery'
-import Testimonials from './components/Testimonials'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
 import AboutUs from './pages/AboutUs'
@@ -17,9 +15,7 @@ function HomePage() {
     <>
       <Hero />
       <Experiences />
-      <PlanVisit />
       <Gallery />
-      <Testimonials />
       <CTA />
     </>
   )

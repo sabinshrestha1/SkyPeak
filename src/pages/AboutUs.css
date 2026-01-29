@@ -99,9 +99,28 @@
   text-align: left;
 }
 
+/* Wave Divider */
+.about-summary__wave {
+  position: relative;
+  width: 100%;
+  line-height: 0;
+  margin-top: var(--space-md);
+}
+
+.about-summary__wave svg {
+  width: 100%;
+  height: 80px;
+  display: block;
+}
+
+.about-summary {
+  padding-bottom: 0;
+}
+
 /* Vision & Mission Section */
 .about-vm {
-  background: linear-gradient(180deg, var(--snow-white) 0%, #EFF6FF 100%);
+  background: linear-gradient(180deg, #EFF6FF 0%, var(--snow-white) 100%);
+  padding-top: var(--space-md);
 }
 
 .about-vm__grid {
@@ -255,8 +274,10 @@
 
 /* CTA Section */
 .about-cta {
-  background: linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%);
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.85) 0%, rgba(2, 132, 199, 0.85) 100%),
+    url('/AVT_Jungle_Park.webp') center/cover no-repeat;
   text-align: center;
+  position: relative;
 }
 
 .about-cta__content {
