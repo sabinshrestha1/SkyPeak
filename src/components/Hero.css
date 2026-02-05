@@ -54,6 +54,10 @@
     color: var(--cloud-white);
     padding: var(--space-4xl) 0;
     animation: fadeInUp 0.8s ease forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 90vh;
 }
 
 .hero__badge {
@@ -117,6 +121,8 @@
     gap: var(--space-3xl);
     padding-top: var(--space-2xl);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: auto;
+    margin-left: 89px;
 }
 
 .hero__stat {

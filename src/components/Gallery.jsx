@@ -37,7 +37,7 @@ function Gallery() {
     return (
         <section id="gallery" className="gallery section">
             <div className="container">
-                <h2 className="section-title">Capture the Magic</h2>
+                <h2 className="section-title">Every Thrill. One Destination.</h2>
                 <p className="section-subtitle">
                     Real moments, real altitude, real emotions from SkyPeak
                 </p>

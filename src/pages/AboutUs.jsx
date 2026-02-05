@@ -18,14 +18,14 @@ function AboutUs() {
         {
             id: 1,
             name: 'Mr. Ram Chandra Sharma',
-            position: 'President & Managing Director',
+            position: 'Chairman',
             image: '/board/Ram_Chandra_Sharma.png',
             featured: true
         },
         {
             id: 2,
             name: 'Mr. Post Bahadur Khadka',
-            position: 'Executive Director',
+            position: 'Managing Director',
             image: '/board/Post_Bahadhur_Khadka.png',
             featured: true
         },

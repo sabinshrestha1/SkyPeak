@@ -18,13 +18,7 @@ const allExperiences = [
         difficulty: 'Thrilling',
         description: 'Feel the rush of adrenaline as you swing over the valley on our massive mechanical swing.',
     },
-    {
-        images: ['/Bungee_Jump_1.webp'],
-        title: 'Bungee Jump',
-        duration: '20-30 mins',
-        difficulty: 'Extreme',
-        description: 'Take the ultimate leap of faith with our world-class bungee jumping experience.',
-    },
+
     {
         images: ['/Edge_Walk.webp'],
         title: 'Edge Walk',
@@ -46,13 +40,7 @@ const allExperiences = [
         difficulty: 'Easy',
         description: 'Explore the serene spiritual sanctuary with magnificent sculptures and peaceful gardens.',
     },
-    {
-        images: ['/AVT_Jungle_Park.webp', '/Raniban_Jungle.webp'],
-        title: 'Jungle Adventure Park',
-        duration: '2-3 hours',
-        difficulty: 'Moderate',
-        description: 'Adventure through lush jungle parks including Raniban forest with exciting trails and wildlife encounters.',
-    },
+
     {
         images: ['/Gaming_Zone.webp', '/Cafeteria.webp'],
         title: 'Entertainment & Dining',
@@ -88,6 +76,20 @@ const allExperiences = [
         duration: '30-45 mins',
         difficulty: 'Easy',
         description: 'Walk on air with transparent floors over dramatic cliffs and breathtaking valleys.',
+    },
+    {
+        images: ['/Laila_Majum.webp'],
+        title: 'Laila Majum',
+        duration: '30-45 mins',
+        difficulty: 'Easy',
+        description: 'Experience the legendary romantic viewpoint with stunning panoramic mountain vistas.',
+    },
+    {
+        images: ['/Sky_Tower_Water_Fall.webp'],
+        title: 'Sky Tower Water Fall',
+        duration: '45 mins - 1 hour',
+        difficulty: 'Easy',
+        description: 'Witness the majestic cascading waters from the towering heights of SkyPeak.',
     },
 ];
 

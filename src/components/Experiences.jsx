@@ -4,11 +4,11 @@ import './Experiences.css';
 // Featured experiences for homepage
 const featuredExperiences = [
     {
-        image: '/Laila_Majum.webp',
-        title: 'Laila Majum',
-        duration: '30-45 mins',
-        difficulty: 'Easy',
-        description: 'Experience the legendary romantic viewpoint with stunning panoramic mountain vistas.',
+        image: '/Bungee_Jump_1.webp',
+        title: 'Bungee Jump',
+        duration: '15-30 mins',
+        difficulty: 'Extreme',
+        description: 'Take the ultimate leap of faith from Nepal\'s highest bungee platform with breathtaking valley views.',
     },
     {
         image: '/Glass_Cantilever.webp',
@@ -18,11 +18,11 @@ const featuredExperiences = [
         description: 'Walk on transparent glass extending over the cliff edge with stunning valley views.',
     },
     {
-        image: '/Sky_Tower_Water_Fall.webp',
-        title: 'Sky Tower Water Fall',
-        duration: '45 mins - 1 hour',
-        difficulty: 'Easy',
-        description: 'Witness the majestic cascading waters from the towering heights of SkyPeak.',
+        image: '/AVT_Jungle_Park.webp',
+        title: 'Jungle Adventure Park',
+        duration: '2-3 hours',
+        difficulty: 'Moderate',
+        description: 'Adventure through lush jungle parks including Raniban forest with exciting trails and wildlife encounters.',
     },
 ];
 
