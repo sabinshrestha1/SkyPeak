@@ -9,6 +9,7 @@ import CTA from './components/CTA'
 import Footer from './components/Footer'
 import AboutUs from './pages/AboutUs'
 import ExperiencesPage from './pages/ExperiencesPage'
+import GalleryPage from './pages/GalleryPage'
 
 function HomePage() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/experiences" element={<ExperiencesPage />} />
+          <Route path="/gallery" element={<GalleryPage />} />
         </Routes>
       </main>
       <Footer />

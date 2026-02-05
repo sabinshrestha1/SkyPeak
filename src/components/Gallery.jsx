@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Gallery.css';
 
 const galleryImages = [
@@ -58,9 +59,9 @@ function Gallery() {
                 </div>
 
                 <div className="gallery__cta">
-                    <a href="#contact" className="btn btn-secondary" style={{ color: 'var(--deep-navy)', borderColor: 'var(--sky-blue)' }}>
+                    <Link to="/gallery" className="btn btn-secondary" style={{ color: 'var(--deep-navy)', borderColor: 'var(--sky-blue)' }}>
                         View Full Gallery
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>

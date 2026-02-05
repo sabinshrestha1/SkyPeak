@@ -36,7 +36,6 @@ function Header() {
     { name: 'Experiences', href: '/experiences', isRoute: true },
     { name: 'About Us', href: '/about', isRoute: true },
     { name: 'Gallery', href: '/#gallery', isRoute: false },
-    { name: 'Contact', href: '/#contact', isRoute: false },
   ];
 
   return (

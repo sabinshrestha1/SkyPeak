@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 function Footer() {
@@ -15,7 +16,7 @@ function Footer() {
                                 className="footer__logo-image"
                             />
                         </div>
-                        
+
                         <div className="footer__social">
                             <a href="#" className="footer__social-link" aria-label="Facebook">
                                 <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
@@ -44,6 +45,7 @@ function Footer() {
                             <li><a href="#home">Home</a></li>
                             <li><a href="#experiences">Experiences</a></li>
                             <li><a href="#gallery">Gallery</a></li>
+                            <li><Link to="/about">About Us</Link></li>
                         </ul>
                     </div>
 

@@ -139,7 +139,9 @@ function ExperiencesPage() {
             {/* Hero Section */}
             <section className="experiences-page__hero">
                 <div className="container">
-                    <h1 className="experiences-page__title">Adventure Experiences</h1>
+                    <h1 className="experiences-page__title">
+                        Our <span className="experiences-page__title-highlight">Experiences</span>
+                    </h1>
                     <p className="experiences-page__subtitle">
                         From thrilling aerial adventures to unique dining experiences —
                         discover the excitement waiting for you at SkyPeak
